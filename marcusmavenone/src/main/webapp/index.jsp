@@ -8,6 +8,6 @@
 </head>
 <body>
 	<h1>A simple Maven test project</h1>
-	<p>Testing 1.2.3...</p>
+	<p>Testing 1.2.3.4.5.</p>
 </body>
 </html>

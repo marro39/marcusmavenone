@@ -12,8 +12,7 @@
                 <property name="URL" value="jdbc:oracle:thin:@localhost:1521:XE" />
                 <property name="user" value="carl" />
                 <property name="password" value="carl" />
-    </bean>
-	  
+    </bean>	  
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
                 <property name="jpaVendorAdapter">
                         <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
@@ -21,18 +20,13 @@
                                 <property name="generateDdl" value="true" />
                                 <property name="databasePlatform" value="org.hibernate.dialect.Oracle10gDialect" />
                         </bean>
-                </property>
-                
+                </property>                
                 <property name="dataSource" ref="dataSource" />
-     </bean>
-        
+     </bean>        
      <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
                 <property name="dataSource" ref="dataSource" />
                 <property name="entityManagerFactory" ref="entityManagerFactory" />
      </bean>
 	<tx:annotation-driven transaction-manager="transactionManager" />
 	<bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
-
-
-
 </beans>

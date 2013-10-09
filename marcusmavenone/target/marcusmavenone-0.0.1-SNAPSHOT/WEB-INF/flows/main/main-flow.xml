@@ -9,7 +9,7 @@
 	</view-state>
 	
 	<view-state id="signUp" view="signUp.xhtml">
-		<transition on="backToSignIn" to="welcome"></transition>
+		<transition on="backToSignIn" to="welcome"></transition>		
 	</view-state>
 
 </flow>
